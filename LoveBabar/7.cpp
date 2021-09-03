@@ -1,3 +1,4 @@
+/*Write a program to cyclically rotate an array by one.*/
 #include <iostream>
 #include <algorithm>
 #include <vector>
