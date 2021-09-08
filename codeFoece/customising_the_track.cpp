@@ -8,9 +8,9 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n, sum = 0;
+       long long int n, sum = 0;
         cin >> n;
-        int arr[n];
+       long long int arr[n];
         for (int i = 0; i < n; i++)
         {
             cin >> arr[i];
@@ -18,7 +18,7 @@ int main()
         }
 
         sum = sum % n;
-        int zeros = n - sum;
+        long long int zeros = n - sum;
         cout << zeros * sum<<endl;;
     }
 }
