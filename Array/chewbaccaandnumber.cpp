@@ -4,14 +4,14 @@ using namespace std;
 
 int main()
 {
-    int n;
+    long long int n,ans=0,mult=1;
     cin >> n;
     while (n != 0)
     {
-        rem = n % 10;
-        if (rem > 5 =)
+        int rem = n % 10;
+        if (rem >= 5 )
         {
-            if (rem == 9 && (num / 10) == 0)
+            if (rem == 9 && (n / 10) == 0)
             {
             }
             else
@@ -24,5 +24,4 @@ int main()
         n /= 10;
     }
     cout << ans;
-}
 }
