@@ -1,0 +1,16 @@
+class Solution {
+public:
+    // If x == y, both stones are destroyed, and
+    // If x != y, the stone of weight x is destroyed, and the stone of weight y has new weight y - x.
+    int lastStoneWeight(vector<int>& stones) {
+      priority_queue<int>pq(stones.begin(),stones.end());
+       while(pq.size()>1){
+            int y=pq.top();
+            pq.pop();
+            int x=pq.top();
+            pq.pop();
+            if(x!=y)pq.push(y-x);
+        }
+        return pq.empty()?0:pq.top();
+    }
+};
