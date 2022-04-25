@@ -33,4 +33,22 @@ int frogJump(int n, vector<int> &heights)
 	}
 	return dp[n-1];
 }
+//Space Optimise
+#include<bits/stdc++.h>
+int frogJump(int n, vector<int> &heights)
+{
+    // Write your code here.
+	vector<int>dp(n,0);
+	int pre=0;
+	int pre2=0;
+	for(int i=1;i<n;i++){
+		int f=pre+abs(heights[i]-heights[i-1]);
+		int s=INT_MAX;
+		if(i>1)s=pre2+abs(heights[i]-heights[i-2]);
+		int curr=min(s,f);
+		pre2=pre;
+		pre=curr;
+	}
+	return pre;
+}
 
