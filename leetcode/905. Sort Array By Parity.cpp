@@ -35,3 +35,15 @@ public:
         return nums;
     }
 };
+//3rd method
+bool cmp(int a,int b){
+        return (a%2)<(b%2);
+    }
+class Solution {
+public:
+    
+    vector<int> sortArrayByParity(vector<int>& nums) {
+        sort(nums.begin(),nums.end(),cmp);
+        return nums;
+    }
+};
