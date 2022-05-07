@@ -8,6 +8,7 @@ long long maxProduct(vector<int> arr, int n) {
 	            prod=1;
 	        }
 	    }
+	//-8,5,3,1,6 for this type of test case
 	    prod=1;
 	    for(int i=n-1;i>=0;i--){
 	        prod*=arr[i];
