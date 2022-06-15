@@ -32,3 +32,38 @@
         temp1->next=odd;
         return even;
     }
+
+//Second Approch' Node* divide(int N, Node *head){
+        // code here
+        if(!head || !head->next)return head;
+        Node *end=head;
+        Node *prev=head;
+        Node *curr=head;
+        while(end->next!=NULL)end=end->next;
+        while(curr && N--){
+            //odd walo ko peeche bejo
+            if((curr->data)&1){
+                if(curr==head){
+                    head=head->next;
+                    end->next=curr;
+                    end=end->next;
+                    end->next=NULL;
+                    curr=head;
+                    prev=head;
+                }
+                else if(curr!=end){
+                        prev->next=curr->next;
+                        end->next=curr;
+                        curr=curr->next;
+                        end=end->next;
+                        end->next=NULL;
+                    }
+            }
+            //even walo ke sath kuch nahi
+            else{
+                    if(prev!=curr)prev=prev->next;
+                    curr=curr->next;
+                }
+            }
+            return head;
+        }
