@@ -33,7 +33,8 @@
         return even;
     }
 
-//Second Approch' Node* divide(int N, Node *head){
+//Second Approch' 
+Node* divide(int N, Node *head){
         // code here
         if(!head || !head->next)return head;
         Node *end=head;
